@@ -19,7 +19,7 @@ def health():
     return {"status": "ok"}
 
 @router.post("/ask")
-async def ask(request: AskRequest):
+def ask(request: AskRequest):
     """
     Ask a travel-related question using the agentic RAG workflow.
     
@@ -31,7 +31,7 @@ async def ask(request: AskRequest):
     5. Generates final answer
     """
     try:
-        answer = await run_workflow(request.question, request.k)
+        answer = run_workflow(request.question, request.k)
         return {"answer": answer}
     
     except Exception as e:

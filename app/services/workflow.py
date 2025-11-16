@@ -45,7 +45,7 @@ graph = workflow.compile()
 
 # display(Image(graph.get_graph().draw_mermaid_png()))
 
-async def run_workflow(question: str, k: int = 5) -> str:
+def run_workflow(question: str, k: int = 5) -> str:
     """
     Run the agentic RAG workflow for a given question.
     

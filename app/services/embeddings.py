@@ -23,7 +23,7 @@ class TravelEmbeddingPipeline:
         chunk_size: int = 500,
         chunk_overlap: int = 50,
         embed_model: str = "nomic-embed-text", # "gemini-1.5-embed-text" or "nomic-embed-text"
-        use_embeddings: bool = False,
+        use_embeddings: bool = True,
     ):
         self.loader = WebLoader()
         self.splitter = RecursiveCharacterTextSplitter(

@@ -50,7 +50,7 @@ def run_workflow(question: str, k: int = 5) -> str:
     Run the agentic RAG workflow for a given question.
     
     Args:
-        question: User's travel-related question
+        question: User's travel-related question and suggest best places to visit. Answer every question as a travel guide.
         k: Number of documents to retrieve
         
     Returns:
